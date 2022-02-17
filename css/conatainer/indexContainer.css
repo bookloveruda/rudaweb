@@ -1,0 +1,373 @@
+@charset "utf-8";
+@import url(common/reset.css);
+
+/* container */
+.container{}
+.container .inner-container{}
+.container .inner-container .index{
+  width: 100%;
+  height: auto;
+  /* border: 1px solid; */
+}
+.container .inner-container .index .sections{}
+.container .inner-container .index .sections .section.sec1{
+  /* width: 100%;
+  height: 100vh; */
+  /* 아래 썼으니까 필요없는거야 */
+}
+.container .inner-container .index .sections .section.sec1 .sec-con{
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* 위치는 얘로 잡아? */
+  display: flex;
+}
+.container .inner-container .index .sections .section.sec1 .sec-con video{
+  /* 비디오 태그는 아래와 같이 4줄..! 공식처럼? */
+  width: 100%;
+  /* 높이는 얘로 잡고  */
+  height: 100vh;
+  /* height:100vh 때문에 상단탭 FOUC 깜빡거림...... */
+  /* 10px border까지 계산한다면 calc()함수로 아래와 같이 표시 */
+  /* height: calc(100vh - 20px); */
+  display: block;
+  object-fit: cover;
+  /* object-fit: fill; */
+  /* border: 10px solid #f00; */
+  box-sizing: border-box;
+  /* position: absolute;여기서 absolute잡으면 안 된다 */
+}
+.container .inner-container .index .sections .section.sec1 .sec-con .sec1-txt{
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+.container .inner-container .index .sections .section.sec1 .sec-con .sec1-txt h1.title{
+  line-height: 40px;
+  /* lh으로만 해도 된다 */
+  /* padding: 20px 0; */
+  font-size: 30px;
+  font-weight: lighter;
+}
+.container .inner-container .index .sections .section.sec1 .sec-con .sec1-txt p{
+  line-height: 20px;
+  /* padding: 5px 0; */
+  letter-spacing: 3px;
+}
+.container .inner-container .index .sections .section.sec1 .sec-con .sec1-txt span.date{
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+
+
+
+.container .inner-container .index .sections .section.sec2{
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+  box-sizing: border-box;
+  /* background-color: rgb(125, 97, 226); */
+  margin: 30px 0 100px;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con{
+  flex: 0 1 980px;
+  height: auto;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con h1.title{
+  line-height: 30px;
+  padding: 30px 0;
+  text-align: center;
+  font-weight: lighter;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con{
+  width: 100%;
+  position: relative;
+  /* height: 550px; */
+  /* min-height:300px; */
+  /* height를 브라우저크기 기준 크기인? vw로 바꿔 */
+  /* 1920px이 100vw이니까 550px을 vw로 바꾸면? = 29vw */
+  height: 29vw;
+  transition: all 0.5s;
+  /* background-color: #ff0; */
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con >ul{
+  width: 100%;
+  height: inherit;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con >ul>li{
+  position: absolute;
+  width: 100%;
+  height: inherit;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con >ul>li img{
+  width: 100%;
+  height: auto;
+  display: block;
+  height: inherit;
+  object-fit: cover;
+}
+
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con .bcon{
+  width: 100%;
+  height: auto;
+  position: absolute;
+  left: 0;
+  /* bottom: 100px; */
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con .bcon .items{
+  width: 17%;
+  height: auto;
+  /* background-color: #ff0; */
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con .bcon .items ul{
+  display: flex;
+  justify-content: space-evenly;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .img-con .bcon .items ul>li{
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  box-sizing: border-box;
+}
+.on{
+  background-color: #fff;
+}
+
+.container .inner-container .index .sections .section.sec2 .sec-con p.p1{
+  padding: 20px 0;
+  line-height: 20px;
+  text-align: center;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .btn-con{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .btn-con span.detail{
+  display: block;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  cursor: pointer;
+  font-weight: lighter;
+  padding: 10px 30px;
+  /* font-size: 14px; */
+}
+.container .inner-container .index .sections .section.sec2 .sec-con .btn-con span.detail:hover{
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #000;
+}
+
+
+
+
+
+.container .inner-container .index .sections .section.sec3{
+  /* width: 100%;
+  height: 100vh; */
+  /* 아래 썼으니까 필요없는거야 */
+  width: 100%;
+}
+.container .inner-container .index .sections .section.sec3 .sec-con{
+  width: 100%;
+  height: auto;
+  position: relative;
+  /* 위치는 얘로 잡아? */
+  display: flex;
+}
+.container .inner-container .index .sections .section.sec3 .sec-con video{
+  /* 비디오 태그는 아래와 같이 4줄..! 공식처럼? */
+  width: 100%;
+  /* 높이는 얘로 잡고  */
+  height: 100vh;
+  /* 10px border까지 계산한다면 calc()함수로 아래와 같이 표시 */
+  /* height: calc(100vh - 20px); */
+  display: block;
+  object-fit: cover;
+  /* object-fit: fill; */
+  /* border: 10px solid #f00; */
+  box-sizing: border-box;
+  /* position: absolute;여기서 absolute잡으면 안 된다 */
+}
+.container .inner-container .index .sections .section.sec3 .sec-con .sec3-txt{
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+  text-align: center;
+}
+.container .inner-container .index .sections .section.sec3 .sec-con .sec3-txt h1.title{
+  font-weight: lighter;
+}
+
+
+
+
+
+.container .inner-container .index .sections .section.sec4{
+  display: flex;
+  justify-content: center;
+  padding: 36px;
+  box-sizing: border-box;
+  /* background-color: rgb(81, 10, 128); */
+}
+.container .inner-container .index .sections .section.sec4 .sec-con{
+  flex: 0 1 980px;
+  height: auto;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con h1.title{
+  line-height: 50px;
+  padding: 40px 0;
+  text-align: center;
+  font-weight: lighter;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con{
+  width: 100%;
+  position: relative;
+  /* height: 550px; */
+  /* mix-height: 550px; */
+  /* height를 브라우저크기 기준 크기인? vw로 바꿔 */
+  /* 1920px이 100vw이니까 550px을 vw로 바꾸면? = 29vw */
+  height: 28vw;
+  /* transition: all 0.5s; */
+}
+
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con >ul{
+  width: 100%;
+  height: inherit;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con >ul>li{
+  position: absolute;
+  width: 100%;
+  height: inherit;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con >ul>li img{
+  width: 100%;
+  height: auto;
+  display: block;
+  height: inherit;
+  /* vh말고... ??? */
+  object-fit: cover;
+}
+
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con .center-btn{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con span.arrow{
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .img-con span.arrow:hover{
+  background-color: rgba(255, 255, 255, 0.514);
+}
+
+.container .inner-container .index .sections .section.sec4 .sec-con .bottom-con{
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .bottom-con>ul{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .bottom-con>ul>li{
+  padding: 10px 20px 100px;
+  box-sizing: border-box;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .bottom-con>ul>li:hover{
+  cursor: pointer;
+  color: rgb(160, 160, 160);
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .bottom-con>ul>li h1{
+  padding: 20px;
+  line-height: 30px;
+  box-sizing: border-box;
+  font-weight: lighter;
+}
+.container .inner-container .index .sections .section.sec4 .sec-con .bottom-con>ul>li p{
+  line-height: 30px;
+}
+
+
+.container .inner-container .index .sections .section.sec5{
+  /* width: 100%;
+  height: 100vh; */
+  background-color: rgb(89, 174, 253);
+}
+.container .inner-container .index .sections .section.sec5 .sec-con{
+  padding: 50px 0 70px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.container .inner-container .index .sections .section.sec5 .sec-con .sec5-con{
+  flex: 0 1 520px;
+  text-align: center;
+  padding: 20px 0 0;
+  /* border: 1px solid; */
+}
+.container .inner-container .index .sections .section.sec5 .sec-con .sec5-con h1.title{
+  line-height: 20px;
+  padding: 0 0 2px;
+  font-weight: lighter;
+}
+.container .inner-container .index .sections .section.sec5 .sec-con .sec5-con p{
+  line-height: 20px;
+  font-size: 12px;
+  padding: 10px 0 20px;
+  letter-spacing: 1px;
+}
+.container .inner-container .index .sections .section.sec5 .sec-con .sec5-con span.pouBtn{
+  width: 100px;
+  display: block;
+  border: 1px solid;
+  background-color: rgb(89, 174, 253);
+  color: #000;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+.container .inner-container .index .sections .section.sec5 .sec-con .sec5-con span.pouBtn:hover{
+  background-color: #000;
+  border: 1px solid #000;
+  color: #Fff;
+}
+
+@media only screen and (max-width:640px){
+  .container .inner-container .index .sections .section.sec4 .sec-con .bottom-con>ul{
+    flex-wrap: wrap;
+  }
+  .container .inner-container .index .sections .section.sec4 .sec-con .img-con{
+    height: 300px;
+    /* height: calc( 100vw - 72px ); */
+  }
+  .container .inner-container .index .sections .section.sec2 .sec-con .img-con{
+    height: 300px;
+    /* height: calc( 100vw - 72px ); */
+  }
+}
